@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated student profile</title><desc id="desc">Abstract portrait with a blue background and warm accent shapes</desc>
+  <rect width="600" height="600" rx="80" fill="#155eef"/><circle cx="300" cy="230" r="115" fill="#ffd6a5"/>
+  <path d="M170 520c20-130 90-190 130-190s110 60 130 190" fill="#14213d"/><circle cx="258" cy="225" r="10"/><circle cx="342" cy="225" r="10"/>
+  <path d="M255 278c28 25 62 25 90 0" fill="none" stroke="#14213d" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="510" cy="95" r="55" fill="#f59e0b" opacity=".95"/>
+</svg>
