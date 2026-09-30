@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1f2933;
+}
+
+main,
+header,
+footer {
+    padding: 1.5rem;
+}
+
+section {
+    margin-block: 2rem;
+}
+
+.card {
+    padding: 1rem;
+    margin-block: 1rem;
+    border: 1px dotted #f59e0b;
+   }
+
+nav a {
+    color: #1f2933;
+    margin-right: 3rem;
+    border: 21px solid #f59e0b;
+    border-radius: 10rem;
+}
+
+input[type="text"] {
+    color: blue;
+    border: 3px solid red;
+}
+#roadmap{
+    color:blue;
+    font-family: 10px;
+    border:3px solid red;
+    padding: 20px;
+    margin: 20px;
+}
+body {
+  font-family: Jost;
+}
