@@ -1,0 +1,359 @@
+/* ── RESET & BASE ─────────────────────────────────── */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #1e293b;
+    padding: 32px 24px;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 32px;
+}
+
+.demo-block {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.demo-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.demo-note {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 640px;
+}
+
+/* Tags that label which tool is used */
+.tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+}
+
+.tag-grid {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.tag-flex {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+/* ── PART 1: BUILDING FLOOR PLAN ─── CSS GRID ─────── */
+
+.building {
+    display: grid;
+
+    /* 4 columns: one narrow label column + 3 equal room columns */
+    grid-template-columns: 80px repeat(3, 1fr);
+
+    /* 2 rows: one for each floor */
+    grid-template-rows: auto auto;
+
+    gap: 10px;
+}
+
+.floor-label {
+    background: #1e293b;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    writing-mode: horizontal-tb;
+}
+
+.room {
+    border-radius: 10px;
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 90px;
+}
+
+.room-icon {
+    font-size: 1.6rem;
+}
+
+.room-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Each room has a different colour */
+.library {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.art-room {
+    background: #fce7f3;
+    color: #9d174d;
+}
+
+.canteen {
+    background: #fef9c3;
+    color: #92400e;
+}
+
+.classroom {
+    background: #dcfce7;
+    color: #14532d;
+}
+
+.science-lab {
+    background: #f3e8ff;
+    color: #6b21a8;
+}
+
+.office {
+    background: #ffedd5;
+    color: #9a3412;
+}
+
+/* ── PART 2: CLASSROOM DESKS ─── CSS FLEXBOX ─────── */
+
+.classroom-interior {
+    display: flex;
+    /* items flow left to right */
+    flex-wrap: wrap;
+    /* wrap to the next line when full */
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.desk {
+    background: #e0f2fe;
+    border: 2px solid #7dd3fc;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0369a1;
+    min-width: 80px;
+    text-align: center;
+}
+
+.blackboard {
+    background: #1e293b;
+    color: #94a3b8;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ── PART 3: HALLWAY LOCKERS ─── CSS FLEXBOX ──────── */
+
+.locker-row {
+    display: flex;
+    justify-content: space-between;
+    /* equal space between every locker */
+    align-items: stretch;
+    /* all lockers same height */
+    gap: 10px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.locker {
+    background: #334155;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 16px 12px;
+    flex: 1;
+    /* each locker grows to fill equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 60px;
+}
+
+.locker-num {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.locker-name {
+    font-size: 0.72rem;
+    color: #94a3b8;
+}
+
+/* ── PART 4: NOTICE BOARD ─── CSS GRID ──────────── */
+
+.notice-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    gap: 14px;
+    background: #78716c;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.notice {
+    border-radius: 8px;
+    padding: 16px;
+    border-left: 5px solid transparent;
+}
+
+.notice-title {
+    font-size: 0.88rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.notice p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+/* Each notice has a different colour — like real notice papers */
+.notice-red {
+    background: #fee2e2;
+    color: #991b1b;
+    border-left-color: #dc2626;
+}
+
+.notice-blue {
+    background: #dbeafe;
+    color: #1e40af;
+    border-left-color: #3b82f6;
+}
+
+.notice-green {
+    background: #dcfce7;
+    color: #14532d;
+    border-left-color: #22c55e;
+}
+
+.notice-yellow {
+    background: #fef9c3;
+    color: #713f12;
+    border-left-color: #eab308;
+}
+
+.notice-purple {
+    background: #f3e8ff;
+    color: #6b21a8;
+    border-left-color: #a855f7;
+}
+
+.notice-orange {
+    background: #ffedd5;
+    color: #9a3412;
+    border-left-color: #f97316;
+}
+
+.notice-red {
+    grid-column: span 3;
+}
+
+/* ── PART 5: COMPARISON CARDS ───────────────────── */
+
+.comparison-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.compare-card {
+    flex: 1;
+    min-width: 240px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.compare-card ul {
+    list-style: none;
+    margin: 10px 0 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.compare-card ul li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding-left: 18px;
+    position: relative;
+}
+
+.compare-card ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.compare-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.compare-rule {
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.compare-flex {
+    background: #dcfce7;
+    color: #14532d;
+}
+
+.compare-flex .compare-rule {
+    background: #bbf7d0;
+}
+
+.compare-grid {
+    background: #ede9fe;
+    color: #4c1d95;
+}
+
+.compare-grid .compare-rule {
+    background: #ddd6fe;
+}

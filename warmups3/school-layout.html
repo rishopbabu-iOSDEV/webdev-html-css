@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Building Layout</title>
+  <link rel="stylesheet" href="school-layout.css">
+</head>
+<body>
+
+  <h1 class="page-title">School Building — Grid vs Flexbox</h1>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       PART 1: BUILDING FLOOR PLAN (CSS GRID)
+       Two floors, three rooms each.
+       Grid because we need rows AND columns at the same time.
+  ════════════════════════════════════════════════════════ -->
+
+  <section class="demo-block">
+    <h2 class="demo-heading">Part 1 — Building Floor Plan <span class="tag tag-grid">CSS Grid</span></h2>
+    <p class="demo-note">Think of this like an architect's top-down drawing of a building. Each room is placed in an exact row and column position. This is a 2D job — CSS Grid is the right tool.</p>
+
+    <div class="building">
+
+      <div class="floor-label">2nd Floor</div>
+
+      <div class="room library">
+        <span class="room-icon">📚</span>
+        <span class="room-name">Library</span>
+      </div>
+
+      <div class="room art-room">
+        <span class="room-icon">🎨</span>
+        <span class="room-name">Art Room</span>
+      </div>
+
+      <div class="room canteen">
+        <span class="room-icon">🍱</span>
+        <span class="room-name">Canteen</span>
+      </div>
+
+      <div class="floor-label">1st Floor</div>
+
+      <div class="room classroom">
+        <span class="room-icon">🏫</span>
+        <span class="room-name">Classroom A</span>
+      </div>
+
+      <div class="room science-lab">
+        <span class="room-icon">🔬</span>
+        <span class="room-name">Science Lab</span>
+      </div>
+
+      <div class="room office">
+        <span class="room-icon">🖥️</span>
+        <span class="room-name">Staff Office</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       PART 2: CLASSROOM INTERIOR (CSS FLEXBOX)
+       Desks lined up in rows inside the classroom.
+       Flexbox because items flow in one direction — left to right.
+  ════════════════════════════════════════════════════════ -->
+
+  <section class="demo-block">
+    <h2 class="demo-heading">Part 2 — Classroom Desks <span class="tag tag-flex">CSS Flexbox</span></h2>
+    <p class="demo-note">Inside the classroom, desks are arranged in a single row — one direction. When there are too many desks for one row, they wrap to the next row. This is a 1D job — Flexbox handles it naturally.</p>
+
+    <div class="classroom-interior">
+      <div class="desk">Desk 1</div>
+      <div class="desk">Desk 2</div>
+      <div class="desk">Desk 3</div>
+      <div class="desk">Desk 4</div>
+      <div class="desk">Desk 5</div>
+      <div class="desk">Desk 6</div>
+      <div class="desk">Desk 7</div>
+      <div class="desk">Desk 8</div>
+    </div>
+
+    <div class="blackboard">📋 Blackboard — front of the class</div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       PART 3: HALLWAY LOCKERS (CSS FLEXBOX)
+       Lockers lined up side by side in a corridor.
+       Flexbox because they flow along one axis — left to right.
+  ════════════════════════════════════════════════════════ -->
+
+  <section class="demo-block">
+    <h2 class="demo-heading">Part 3 — Hallway Lockers <span class="tag tag-flex">CSS Flexbox</span></h2>
+    <p class="demo-note">Lockers are placed side by side along a corridor wall. They all share the same height and stay in one line — one direction. Flexbox keeps them evenly spaced without any math.</p>
+
+    <div class="locker-row">
+      <div class="locker">
+        <div class="locker-num">01</div>
+        <div class="locker-name">Priya</div>
+      </div>
+      <div class="locker">
+        <div class="locker-num">02</div>
+        <div class="locker-name">Ravi</div>
+      </div>
+      <div class="locker">
+        <div class="locker-num">03</div>
+        <div class="locker-name">Anjali</div>
+      </div>
+      <div class="locker">
+        <div class="locker-num">04</div>
+        <div class="locker-name">Dev</div>
+      </div>
+      <div class="locker">
+        <div class="locker-num">05</div>
+        <div class="locker-name">Sara</div>
+      </div>
+      <div class="locker">
+        <div class="locker-num">06</div>
+        <div class="locker-name">Kiran</div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       PART 4: NOTICE BOARD (CSS GRID)
+       Six pinned notices in a 3×2 arrangement.
+       Grid because each notice sits in a fixed row AND column.
+  ════════════════════════════════════════════════════════ -->
+
+  <section class="demo-block">
+    <h2 class="demo-heading">Part 4 — Notice Board <span class="tag tag-grid">CSS Grid</span></h2>
+    <p class="demo-note">A notice board has notices pinned in rows and columns — a 2D arrangement. Even if you remove one notice, the empty space stays in that exact position. That fixed two-dimensional structure is why Grid is the right tool here.</p>
+
+    <div class="notice-board">
+
+      <div class="notice notice-red">
+        <div class="notice-title">🏆 Sports Day</div>
+        <p>Annual sports day on 15 Oct. All students must register by Friday.</p>
+      </div>
+
+      <div class="notice notice-blue">
+        <div class="notice-title">📅 Exam Schedule</div>
+        <p>Unit test timetable for November is now available at the office.</p>
+      </div>
+
+      <div class="notice notice-green">
+        <div class="notice-title">🎤 Science Fair</div>
+        <p>Project submissions open. Last date: 20 October. Form at library.</p>
+      </div>
+
+      <div class="notice notice-yellow">
+        <div class="notice-title">🚌 Bus Route</div>
+        <p>Route 4 timing changed. New pickup from Main Gate at 7:15 AM.</p>
+      </div>
+
+      <div class="notice notice-purple">
+        <div class="notice-title">📚 Library Hours</div>
+        <p>Extended hours this month — library open until 5:30 PM on weekdays.</p>
+      </div>
+
+      <div class="notice notice-orange">
+        <div class="notice-title">🎨 Art Exhibition</div>
+        <p>Student artworks on display in the ground floor lobby until 31 Oct.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       PART 5: QUICK COMPARISON TABLE
+       A simple table showing which tool to use and when.
+  ════════════════════════════════════════════════════════ -->
+
+  <section class="demo-block">
+    <h2 class="demo-heading">Part 5 — When to Use Which</h2>
+
+    <div class="comparison-row">
+
+      <div class="compare-card compare-flex">
+        <div class="compare-title">Flexbox</div>
+        <ul>
+          <li>Desks in a classroom row</li>
+          <li>Lockers along a corridor</li>
+          <li>Books on a single shelf</li>
+          <li>Passengers in one seat row on a bus</li>
+          <li>Items on a factory conveyor belt</li>
+        </ul>
+        <div class="compare-rule">→ Things arranged in <strong>one direction</strong></div>
+      </div>
+
+      <div class="compare-card compare-grid">
+        <div class="compare-title">Grid</div>
+        <ul>
+          <li>Rooms on a building floor plan</li>
+          <li>Notices pinned on a board</li>
+          <li>Seats in a cinema hall (all rows)</li>
+          <li>Plots in a housing colony map</li>
+          <li>Cells in a spreadsheet</li>
+        </ul>
+        <div class="compare-rule">→ Things placed in <strong>rows AND columns</strong></div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+</body>
+</html>

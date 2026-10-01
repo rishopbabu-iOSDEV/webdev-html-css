@@ -1,0 +1,244 @@
+/* ── RESET & BASE ─────────────────────────────────── */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ── PAGE LAYOUT GRID ─────────────────────────────── */
+
+.page-layout {
+    display: grid;
+
+    /* Two columns: a narrow sidebar (220px) and a wide main area (the rest) */
+    grid-template-columns: 220px 1fr;
+
+    /* Three rows: header adjusts to content, main fills remaining space, footer adjusts to content */
+    grid-template-rows: auto 1fr auto;
+
+    /* Name the four regions — the ASCII art IS the layout */
+    grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";
+
+    gap: 1.5rem;
+    /* space between all grid cells */
+    min-height: 100vh;
+    /* page fills the full browser window */
+    padding: 1.5rem;
+}
+
+/* ── ASSIGN GRID AREAS ────────────────────────────── */
+
+.site-header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main-content {
+    grid-area: main;
+}
+
+.site-footer {
+    grid-area: footer;
+}
+
+/* ── HEADER ───────────────────────────────────────── */
+
+.site-header {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 10px;
+
+    display: flex;
+    /* flexbox inside the grid cell */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    color: #ffffff;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav a {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.header-nav a:hover {
+    color: #ffffff;
+}
+
+/* ── FOOTER ───────────────────────────────────────── */
+
+.site-footer {
+    background-color: #1a1a2e;
+    color: #aaa;
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* ── SIDEBAR ──────────────────────────────────────── */
+
+.sidebar {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.sidebar h2 {
+    color: #1a1a2e;
+    margin-bottom: 16px;
+}
+
+.sidebar li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar li:last-child {
+    border-bottom: none;
+}
+
+.sidebar a {
+    color: #4f8ef7;
+    font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+    color: #1a1a2e;
+}
+
+/* ── MAIN CONTENT ─────────────────────────────────── */
+
+.main-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.main-content>h2 {
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.main-content>p {
+    margin-bottom: 28px;
+}
+
+/* ── CARD GRID ────────────────────────────────────── */
+
+.card-grid {
+    /* GRID STARTS HERE */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 equal columns */
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.card {
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card h3 {
+    color: #1a1a2e;
+}
+
+/* ── FEATURE GRID ─────────────────────────────────── */
+
+.features-title {
+    color: #1a1a2e;
+    margin-bottom: 16px;
+}
+
+.feature-grid {
+    /* GRID STARTS HERE */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 equal columns */
+    gap: 16px;
+}
+
+.feature-box {
+    background-color: #eef2ff;
+    border-radius: 10px;
+    padding: 20px 24px;
+}
+
+.feature-box h3 {
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+/* Experiment: make the first feature span both columns */
+/* .feature-box:last-child {
+    grid-column: span 2;
+} */

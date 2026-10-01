@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Practice</title>
+  <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+
+
+  <!-- ── PAGE WRAPPER ────────────────────────────────────
+       This single div becomes the grid container.
+       All four regions sit inside it as direct children.
+  ─────────────────────────────────────────────────────── -->
+
+  <div class="page-layout">
+
+
+    <!-- ── REGION 1: HEADER ──────────────────────────────
+         Spans the full width across both columns.
+         Grid area name: header
+    ─────────────────────────────────────────────────────── -->
+
+    <header class="site-header">
+      <h1 class="site-logo">MyWebsite</h1>
+      <nav class="header-nav">
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+
+    <!-- ── REGION 2: SIDEBAR ─────────────────────────────
+         A narrow column on the left side.
+         Grid area name: sidebar
+    ─────────────────────────────────────────────────────── -->
+
+    <aside class="sidebar">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">Development</a></li>
+        <li><a href="#">SEO</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </aside>
+
+
+    <!-- ── REGION 3: MAIN CONTENT ────────────────────────
+         The wide column. Contains a heading, paragraph,
+         and a grid of three service cards.
+         Grid area name: main
+    ─────────────────────────────────────────────────────── -->
+
+    <main class="main-content">
+
+      <h2>Our Services</h2>
+      <p>We build clean websites, run search campaigns, and help businesses show up where it matters. Every project starts with a conversation.</p>
+
+      <!-- ── CARD GRID ──────────────────────────────────
+           Three cards sitting side by side.
+           Grid: repeat(3, 1fr) — three equal columns.
+      ─────────────────────────────────────────────────── -->
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Web Design</h3>
+          <p>Clean, modern sites that work on every screen and every device.</p>
+        </div>
+
+        <div class="card">
+          <h3>Development</h3>
+          <p>From landing pages to full web apps — fast, reliable, and tested.</p>
+        </div>
+
+        <div class="card">
+          <h3>SEO</h3>
+          <p>We help the right people find your site on Google, not just anyone.</p>
+        </div>
+
+      </div>
+
+
+      <!-- ── FEATURE ROW ────────────────────────────────
+           Two feature boxes side by side.
+           Grid: repeat(2, 1fr) — two equal columns.
+      ─────────────────────────────────────────────────── -->
+
+      <h2 class="features-title">Why Choose Us</h2>
+
+      <div class="feature-grid">
+
+        <div class="feature-box">
+          <h3>🚀 Fast Delivery</h3>
+          <p>We ship your project on time, every time. No delays, no excuses.</p>
+        </div>
+
+        <div class="feature-box">
+          <h3>💬 Good Support</h3>
+          <p>We answer questions and fix issues even after the project is live.</p>
+        </div>
+
+        <div class="feature-box">
+          <h3>🎨 Clean Design</h3>
+          <p>Every pixel is intentional. We don't add things without a reason.</p>
+        </div>
+
+        <div class="feature-box">
+          <h3>📈 Real Results</h3>
+          <p>We measure success by what the numbers say, not how the site looks.</p>
+        </div>
+
+      </div>
+
+    </main>
+
+
+    <!-- ── REGION 4: FOOTER ───────────────────────────────
+         Spans the full width across both columns.
+         Grid area name: footer
+    ─────────────────────────────────────────────────────── -->
+
+    <footer class="site-footer">
+      <p>© 2024 MyWebsite. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </footer>
+
+
+  </div><!-- end .page-layout -->
+
+
+</body>
+</html>
