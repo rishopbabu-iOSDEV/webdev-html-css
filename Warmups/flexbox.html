@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <!-- ── SECTION 1: NAVBAR ───────────────────────────────
+       Goal: logo on the left, links on the right
+       Flexbox used: display:flex + justify-content:space-between + align-items:center
+  ─────────────────────────────────────────────────────── -->
+
+  <nav class="navbar">
+    <h2 class="logo">MyWebsite</h2>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Work</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- ── SECTION 2: HERO ─────────────────────────────────
+       Goal: text centered in the middle of a tall box
+       Flexbox used: display:flex + justify-content:center + align-items:center + flex-direction:column
+  ─────────────────────────────────────────────────────── -->
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to My Site</h2>
+      <p>This is a simple hero section. Flexbox centers everything here — both horizontally and vertically.</p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </section>
+
+
+  <!-- ── SECTION 3: CARDS ────────────────────────────────
+       Goal: three cards sitting side by side, wrapping on small screens
+       Flexbox used: display:flex + flex-wrap:wrap + gap
+  ─────────────────────────────────────────────────────── -->
+
+  <section class="cards-section">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="cards-row">
+
+      <div class="card">
+        <h2>Web Design</h2>
+        <p>We design clean, modern websites that look great on all devices and screen sizes.</p>
+      </div>
+
+      <div class="card">
+        <h2>Development</h2>
+        <p>From landing pages to full web apps, we build fast and reliable products.</p>
+      </div>
+
+      <div class="card">
+        <h2>SEO</h2>
+        <p>We help your website show up on Google so the right people can find you.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ── SECTION 4: FEATURE ROW ──────────────────────────
+       Goal: icon and text sitting side by side (not stacked)
+       Flexbox used: display:flex + align-items:flex-start + gap
+  ─────────────────────────────────────────────────────── -->
+
+  <section class="features-section">
+    <h2 class="section-title">Why Choose Us</h2>
+
+    <div class="feature-item">
+      <div class="feature-icon">🚀</div>
+      <div class="feature-text">
+        <h2>Fast Delivery</h2>
+        <p>We ship your project on time, every time. No delays, no excuses.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🎨</div>
+      <div class="feature-text">
+        <h2>Clean Design</h2>
+        <p>Every pixel is intentional. We don't add things that don't have a reason to be there.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">💬</div>
+      <div class="feature-text">
+        <h2>Good Support</h2>
+        <p>We're available to answer questions and fix issues even after the project is done.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ── SECTION 5: FOOTER ───────────────────────────────
+       Goal: copyright on the left, social links on the right
+       Flexbox used: display:flex + justify-content:space-between + align-items:center
+  ─────────────────────────────────────────────────────── -->
+
+  <footer class="footer">
+    <p>© 2026 MyWebsite. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+
+</body>
+</html>

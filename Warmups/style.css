@@ -1,0 +1,197 @@
+/* ── RESET & BASE ─────────────────────────────────── */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* ── NAVBAR ───────────────────────────────────────── */
+
+.navbar {
+  background-color: #1a1a2e;
+  padding: 16px 32px;
+
+  /* FLEXBOX STARTS HERE */
+  display: flex;
+  justify-content: space-between;   /* pushes logo left, links right */
+  align-items: center;              /* vertically centers both in the bar */
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;          
+  gap: 24px;              
+}
+
+.nav-links a {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.hero {
+  background-color: #16213e;
+  min-height: 320px;
+  padding: 40px 32px;
+
+  /* FLEXBOX STARTS HERE */
+  display: flex;
+  justify-content: center;    /* centers horizontally */
+  align-items: center;        /* centers vertically */
+}
+
+.hero-content {
+  max-width: 560px;
+  text-align: center;
+
+  /* column stacks h2, p, and button on top of each other */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* centers children horizontally */
+  gap: 16px;
+}
+
+.hero-content h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.btn {
+  background-color: #4f8ef7;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #3a7af5;
+}
+
+.cards-section {
+  padding: 48px 32px;
+  background-color: #f5f5f5;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 24px;
+}
+
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;        
+  gap: 20px;               
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  flex: 1;                 /* each card grows equally to fill the row */
+  min-width: 200px;        /* minimum width before wrapping to next row */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.card h2 {
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+/* ── FEATURES SECTION ─────────────────────────────── */
+
+.features-section {
+  padding: 48px 32px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;   /* stacks the section title and items vertically */
+  gap: 24px;
+}
+
+.feature-item {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 20px 24px;
+
+  /* FLEXBOX STARTS HERE */
+  display: flex;
+  align-items: flex-start;  /* icon and text align at the top */
+  gap: 16px;                /* space between icon and text */
+}
+
+.feature-icon {
+  font-size: 2rem;
+  flex-shrink: 0;           /* icon never shrinks or squishes */
+}
+
+.feature-text h2 {
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+/* ── FOOTER ───────────────────────────────────────── */
+
+.footer {
+  background-color: #1a1a2e;
+  padding: 20px 32px;
+  color: #aaa;
+  font-size: 0.85rem;
+
+  /* FLEXBOX STARTS HERE */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #aaa;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}

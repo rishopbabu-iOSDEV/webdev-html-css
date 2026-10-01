@@ -1,0 +1,38 @@
+/* .card1{
+    position: static;
+    border:10px solid black;
+}
+.card2{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    border:10px solid #da0d0d;
+}
+.card3{
+    position:relative;
+    top: 80px;
+    border:10px solid #0d7fda;
+}
+#heading{
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+#para1{
+    position: relative;
+    top: 40px;
+    right: 20px;
+    border: 5px solid yellow;
+}
+#para2{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    border: 5px solid green;
+} */
+.card4{
+    position: fixed;
+    bottom: 0px;
+    left: 20px;
+    border: 7px solid orange;
+}

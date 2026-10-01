@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #17233c;
+    background: #f4f7fb;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 1rem;
+    background: white;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+main,
+footer {
+    padding: 1.5rem;
+}
+
+.hero {
+    padding: 3rem 1.5rem;
+    background: #dce8ff;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    position: relative;
+    flex: 1 1 240px;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #cbd6e5;
+}
+
+.card__badge {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    background: #ffd166;
+    padding: .2rem .5rem;
+}
